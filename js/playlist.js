@@ -1,7 +1,7 @@
 $(function() {
 	var $table = $("table tbody");
 
-	$.getJSON("/_data/400.json").done(function(data) {
+	$.getJSON("_data/400.json").done(function(data) {
 		var songs = data[1][0];
 		var count = 1;
 
