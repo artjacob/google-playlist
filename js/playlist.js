@@ -14,6 +14,13 @@ $(function() {
 			$("<td />").addClass("length").html(secondsToHumanDuration(value[13] / 1000)).appendTo($song);
 			$("<td />").html(value[18]).appendTo($song);
 
+			if(value[52]) {
+				var $youtube_link = $("<a />").attr("href", "https://youtu.be/" + value[52]).html("YouTube");
+				$("<td />").addClass("youtube-link").append($youtube_link).appendTo($song);
+			} else {
+				$("<td />").appendTo($song);
+			}
+
 			$song.appendTo($table);
 
 		//	$("<div />").text("#EXTINF:" + (value[13] / 1000) + "," + value[1]).appendTo($pre);
