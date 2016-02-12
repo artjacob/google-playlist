@@ -35,7 +35,7 @@ function secondsToHumanDuration(seconds) {
 	var minutes = Math.floor(seconds / 60);
 	var trailing_seconds = Math.floor(seconds - (minutes * 60));
 
-	var human_duration = minutes + ":" + (trailing_seconds > 10? trailing_seconds : "0" + trailing_seconds);
+	var human_duration = minutes + ":" + (trailing_seconds >= 10? trailing_seconds : "0" + trailing_seconds);
 
 	return human_duration;
 }
