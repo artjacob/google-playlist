@@ -16,8 +16,8 @@ $(function() {
 
 			$song.appendTo($table);
 
-			$("<div />").text("#EXTINF:" + (value[13] / 1000) + "," + value[1]).appendTo($pre);
-			$("<div />").text("/Users/arthur/Music/" + value[1] + ".m4a").appendTo($pre);
+		//	$("<div />").text("#EXTINF:" + (value[13] / 1000) + "," + value[1]).appendTo($pre);
+		//	$("<div />").text("/Users/arthur/Music/" + value[1] + ".m4a").appendTo($pre);
 
 			count++;
 		});
