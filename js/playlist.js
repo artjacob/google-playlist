@@ -8,10 +8,10 @@ $(function() {
 
 		$.each(songs, function(index, value) {
 			var $song = $("<tr />");
-			$("<td />").html(count).appendTo($song);
-			$("<td />").html(value[1]).appendTo($song);
+			$("<td />").addClass("count").html(count).appendTo($song);
+			$("<td />").addClass("song-title").html(value[1]).appendTo($song);
 			$("<td />").html(value[3]).appendTo($song);
-			$("<td />").html((value[13] / 1000)).appendTo($song);
+			$("<td />").addClass("length").html(secondsToHumanDuration(value[13] / 1000)).appendTo($song);
 			$("<td />").html(value[18]).appendTo($song);
 
 			$song.appendTo($table);
@@ -23,3 +23,12 @@ $(function() {
 		});
 	});
 });
+
+function secondsToHumanDuration(seconds) {
+	var minutes = Math.floor(seconds / 60);
+	var trailing_seconds = Math.floor(seconds - (minutes * 60));
+
+	var human_duration = minutes + ":" + (trailing_seconds > 10? trailing_seconds : "0" + trailing_seconds);
+
+	return human_duration;
+}
