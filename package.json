@@ -1,0 +1,19 @@
+{
+  "name": "google-playlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parser.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://artjacob@github.com/artjacob/google-playlist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artjacob/google-playlist/issues"
+  },
+  "homepage": "https://github.com/artjacob/google-playlist#readme",
+  "dependencies": {
+    "fs-extra": "^7.0.1"
+  }
+}
